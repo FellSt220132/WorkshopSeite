@@ -21,7 +21,7 @@
         return $value;
     }
 
-    $email = $_POST['email'];
+    $email = $_POST['email'] ?? '';
 
     $mailto = "fellner.workshops@gmail.com";
     $mailsubj = "Fellner Workshops ANFRAGE";
