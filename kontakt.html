@@ -29,27 +29,29 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="angebote.html">Angebote</a></li>
-                <li><a href="steckbrief.html">Steckbrief &amp; Erfahrungen</a></li>
-                <li class="current"><a href="kontakt.html">Kontakt &amp; Impressum</a></li>
+                <li><a href="steckbrief.html">Über mich</a></li>
+                <li class="current"><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
             </ul>
         </nav>
 
         <main id="content">
-            <h2>Kontakt &amp; Impressum</h2>
-            <p>Stefan Fellner<br>
-                Adresse: Dr. Karl Renner Straße 33<br>
-                4210, Gallneukirchen - Österreich<br>
-                E-Mail: fellner.workshops@gmail.com<br>
-                Tätigkeitsbereich: Durchführung von Workshops im Bereich IT und Programmierung<br>
-                Unternehmensform: Einzelperson ohne Eintragung ins Firmenbuch<br>
-                Haftung für Inhalte:<br>
-                Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, 
-                Vollständigkeit und Aktualität der Inhalte wird jedoch keine Haftung übernommen.<br>
-                Haftung für Links:<br>
-                Diese Website enthält (Stand 01.05.2025, 15:00) keine Links zu externen Websites Dritter, 
-                auf deren Inhalte kein Einfluss bestehen würde. Sollten diese in Zukunft enthalten sein wird 
-                für diese fremden Inhalte auch keine Gewähr übernommen.
-            </p>
+            <h2>Kontakt</h2>
+            <form class="contactForm" method="post" enctype="text/plain" action="php/form_feedback.php">
+                <fieldset>
+                    <legend>Ihre Nachricht an mich</legend>
+                    <label for="name" class="bold">Name: </label>
+                    <input type="text" name="name" value=""><br>
+
+                    <label for="email" class="bold">E-Mail Adresse:</label>
+                    <input type="text" name="email" value=""><br>
+
+                    <label for="nachricht" class="bold">Ihre Nachricht</label>
+                    <textarea name="nachricht"></textarea><br>
+
+                    <input type="submit" name="submitbutton" id="submitbutton" value="Senden">
+                </fieldset>
+            </form>
         </main>
     </div>
 </body>

@@ -61,6 +61,39 @@ li.current {
     color: #FAF9F8;
 }
 
+form.contactForm fieldset {
+    margin-top: 25px;
+    padding: 10px 10px 10px;
+    width: 500px;
+}
+
+form.contactForm legend {
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+form.contactForm label {
+    float: left;
+    width: 130px;
+}
+
+form.contactForm input,
+textarea {
+    width: 220px;
+    margin-bottom: 5px;
+}
+
+form.contactForm textarea {
+    width: 350px;
+    height: 150px;
+}
+
+#submitbutton {
+    margin-left: 0px;
+    margin-top: 25px;
+    width: 100px;
+}
+
 #container {
     width: 100%;
     max-width: 1280px;
@@ -145,4 +178,8 @@ li.current {
     color: inherit;
     font-family: inherit;
     text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
 }
