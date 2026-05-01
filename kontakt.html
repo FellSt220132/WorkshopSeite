@@ -41,13 +41,17 @@
                 <fieldset>
                     <legend>Ihre Nachricht an mich</legend>
                     <label for="name" class="bold">Name: </label>
-                    <input type="text" name="name" value=""><br>
+                    <input type="text" name="name" required><br>
 
                     <label for="email" class="bold">E-Mail Adresse:</label>
-                    <input type="text" name="email" value=""><br>
+                    <input type="email" name="email" required><br>
 
                     <label for="nachricht" class="bold">Ihre Nachricht</label>
-                    <textarea name="nachricht"></textarea><br>
+                    <textarea name="nachricht" required></textarea><br>
+
+                    <input type="text" name="_gotcha" style="display:none;">
+
+                    <input type="hidden" name="_redirect" value="https://fellst220132.github.io/WorkshopSeite/danke.html">
 
                     <input type="submit" name="submitbutton" id="submitbutton" value="Senden">
                 </fieldset>
