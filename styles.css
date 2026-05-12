@@ -199,7 +199,7 @@ p {
 }
 
 #menu a {
-    transition: background 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
 h2 {
@@ -222,4 +222,35 @@ form.contactForm fieldset {
 
 #content {
     border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.carousel {
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 12px;
+    width: max-content;
+    animation: scrollCarousel 25s linear infinite;
+}
+
+.carousel-track img {
+    width: 260px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+@keyframes scrollCarousel {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
