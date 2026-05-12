@@ -1,185 +1,225 @@
 body {
-    margin: 0px;
-    padding: 8px;
-
-    background-color: #F2F1F0;
-
+    margin: 0;
     font-family: system-ui, sans-serif;
-
-    color: #555555;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #222;
+    background: #f3f5f7;
 }
 
-h1 {
-    margin: 0px;
-    padding: 0px;
+#container {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 0 16px;
 }
 
-td {
-    padding: 15px;
+#header {
+    background: #366BF4;
+    color: white;
+    padding: 18px 20px;
+    border-radius: 12px;
+    margin-bottom: 16px;
 }
 
-tr.secondcolumn {
-    background-color: #F2F1F0;
+#header a {
+    color: white;
+    text-decoration: none;
 }
 
-table {
-    border-collapse: collapse;
+#menu {
+    float: left;
+    width: 220px;
+    background: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 12px;
+    margin-right: 16px;
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    margin-bottom: 6px;
+}
+
+#menu a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #222;
+}
+
+#menu a:hover {
+    background: #f0f2f5;
+}
+
+li.current a {
+    background: #366BF4;
+    color: white;
+}
+
+#content {
+    overflow: hidden;
+    background: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 24px;
+}
+
+p {
+    margin-bottom: 14px;
 }
 
 a {
-    color: inherit;
-    font-family: inherit;
-    text-decoration: none;
-}
-
-a:link {
-    color: inherit;
-    font-family: inherit;
-    text-decoration: none;
-}
-
-a:visited {
-    color: inherit;
-    font-family: inherit;
+    color: #366BF4;
     text-decoration: none;
 }
 
 a:hover {
-    color: inherit;
-    font-family: inherit;
-    text-decoration: none;
-}
-
-a:active {
-    color: inherit;
-    font-family: inherit;
-    text-decoration: none;
-}
-
-li.current {
-    background-color: #366BF4;
-    color: #FAF9F8;
-}
-
-form.contactForm fieldset {
-    margin-top: 25px;
-    padding: 10px 10px 10px;
-    width: 500px;
-}
-
-form.contactForm legend {
-    padding: 0 10px;
-    font-weight: bold;
-}
-
-form.contactForm label {
-    float: left;
-    width: 130px;
-}
-
-form.contactForm input,
-textarea {
-    width: 220px;
-    margin-bottom: 5px;
-}
-
-form.contactForm textarea {
-    width: 350px;
-    height: 150px;
-}
-
-#submitbutton {
-    margin-left: 0px;
-    margin-top: 25px;
-    width: 100px;
-}
-
-#container {
-    width: 100%;
-    max-width: 1280px;
-
-    margin: 0 auto 0 auto;
-}
-
-#header {
-    width: inherit;
-    height: 80px;
-
-    margin: 0px 0px 15px 0px;
-    padding: 0px 0px 0px 15px;
-
-    background-color: #366BF4;
-
-    box-shadow: 2px 2px 2px 0px #515151;
-}
-
-#header h1 {
-    font-size: 36px;
-    line-height: 80px;
-
-    color: #FAF9F8;
-}
-
-#menu {
-    width: auto;
-    height: auto;
-
-    margin: 0px 15px 0px 0px;
-    padding: 10px;
-
-    float: left;
-
-    background-color: #FAF9F8;
-
-    box-shadow: 2px 2px 2px 0px #515151;
-}
-
-#menu li {
-    font-size: 16px;
-    margin: 0px 0px 15px 0px;
-    padding: 0px 10px 0px 10px
-}
-
-#menu ul {
-    list-style-type: none;
-    padding: 0px;
-}
-
-#menu a:hover {
-    background-color: #F2F1F0;
-}
-
-#content {
-    width: auto;
-    height: auto;
-
-    padding: 10px 15px 10px 15px;
-
-    overflow: hidden;
-
-    background-color: #FAF9F8;
-
-    box-shadow: 2px 2px 2px 0px #515151;
-}
-
-#content h2 {
-    font-size: 16px;
-    line-height: 1.4;
-
-    text-align: center;
-}
-
-#content p {
-    font-size: 15px;
-    line-height: 1.3;
-}
-
-#content a {
-    color: inherit;
-    font-family: inherit;
     text-decoration: underline;
 }
 
-.bold {
-    font-weight: bold;
+img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    margin: 6px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background: #f7f8fa;
+}
+
+form.contactForm fieldset {
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+form.contactForm label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+form.contactForm input,
+form.contactForm textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-top: 4px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+#submitbutton {
+    margin-top: 16px;
+    background: #366BF4;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.card h4 {
+    margin: 0 0 8px 0;
+}
+
+.card p {
+    margin: 6px 0;
+}
+
+#container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+}
+
+#content {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+#menu {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+#header {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+p {
+    color: #333;
+}
+
+#menu a {
+    transition: background 0.2s ease;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+img {
+    display: block;
+    margin: 10px 0;
+}
+
+form.contactForm fieldset {
+    background: #fff;
+}
+
+#content {
+    border: 1px solid rgba(0, 0, 0, 0.06);
 }

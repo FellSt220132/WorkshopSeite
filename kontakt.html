@@ -1,60 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Standard Stuff -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Programmier-Workshops in OÖ und Umgebung">
+    <meta name="description" content="Kontakt für Programmier-Workshops">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Fellner Workshops">
-    <meta property="og:description" content="Praxisnahe IT-Workshops für Schüler">
+    <meta property="og:title" content="Fellner Workshops - Kontakt">
+    <meta property="og:description" content="Anfrage für IT-Workshops an Schulen">
     <meta property="og:type" content="website">
-    <!-- FIXME Link ändern sobald ich eine Domain und ein gutes Bild habe... -->
-    <meta property="og:image" content="https://fellst220132.github.io/WorkshopSeite/images/NA.jpg">
 
-    <!-- Styling Stuff -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico">
 
-    <title>Fellner Workshops - Kontakt</title>
+    <title>Kontakt - Fellner Workshops</title>
 </head>
+
 <body>
-    <div id="container">
-        <header id="header">
-            <h1><a href="index.html">Fellner Workshops</a></h1>
-        </header>
+<div id="container">
 
-        <nav id="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="angebote.html">Angebote</a></li>
-                <li><a href="steckbrief.html">Über mich</a></li>
-                <li class="current"><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="impressum.html">Impressum</a></li>
-            </ul>
-        </nav>
+    <header id="header">
+        <h1><a href="index.html">Fellner Workshops</a></h1>
+    </header>
 
-        <main id="content">
-            <h2>Kontakt</h2>
-            <form class="contactForm" method="POST" action="https://formspree.io/f/mqenalea">
-                <fieldset>
-                    <legend>Ihre Nachricht an mich</legend>
-                    <label for="name" class="bold">Name: </label>
-                    <input type="text" name="name" required><br>
+    <nav id="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="angebote.html">Angebote</a></li>
+            <li><a href="steckbrief.html">Über mich</a></li>
+            <li class="current"><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+    </nav>
 
-                    <label for="email" class="bold">E-Mail Adresse:</label>
-                    <input type="email" name="email" required><br>
+    <main id="content">
 
-                    <label for="nachricht" class="bold">Ihre Nachricht</label>
-                    <textarea name="nachricht" required></textarea><br>
+        <h2>Kontakt</h2>
 
-                    <input type="text" name="_gotcha" style="display:none;">
+        <p>
+            Für Anfragen zu Workshops oder Kooperationen können Sie mich direkt über das Formular kontaktieren.
+        </p>
 
-                    <input type="submit" name="submitbutton" id="submitbutton" value="Senden">
-                </fieldset>
-            </form>
-        </main>
-    </div>
+        <p>
+            Ich melde mich in der Regel innerhalb kurzer Zeit zurück.
+        </p>
+
+        <form class="contactForm" method="POST" action="https://formspree.io/f/mqenalea">
+
+            <fieldset>
+                <legend>Nachricht senden</legend>
+
+                <label>Name</label>
+                <input type="text" name="name" required>
+
+                <label>E-Mail</label>
+                <input type="email" name="email" required>
+
+                <label>Nachricht</label>
+                <textarea name="nachricht" rows="6" required></textarea>
+
+                <input type="text" name="_gotcha" style="display:none;">
+
+                <input type="submit" id="submitbutton" value="Anfrage senden">
+            </fieldset>
+
+        </form>
+
+    </main>
+
+</div>
 </body>
 </html>
