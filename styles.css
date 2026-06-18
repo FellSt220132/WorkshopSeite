@@ -7,18 +7,26 @@ body {
     background: #f3f5f7;
 }
 
+/* Container */
 #container {
     max-width: 1100px;
     margin: 24px auto;
     padding: 0 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-start;
 }
 
+/* Header */
 #header {
+    width: 100%;
     background: #366BF4;
     color: white;
     padding: 18px 20px;
     border-radius: 12px;
-    margin-bottom: 16px;
+    margin-bottom: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
 }
 
 #header a {
@@ -26,14 +34,14 @@ body {
     text-decoration: none;
 }
 
+/* Menu */
 #menu {
-    float: left;
-    width: 220px;
+    flex: 0 0 220px;
     background: white;
     border: 1px solid #e6e6e6;
     border-radius: 12px;
     padding: 12px;
-    margin-right: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.04);
 }
 
 #menu ul {
@@ -52,6 +60,7 @@ body {
     border-radius: 8px;
     text-decoration: none;
     color: #222;
+    transition: background-color .2s ease;
 }
 
 #menu a:hover {
@@ -63,26 +72,41 @@ li.current a {
     color: white;
 }
 
+/* Content */
 #content {
-    overflow: hidden;
+    flex: 1;
+    min-width: 0;
     background: white;
-    border: 1px solid #e6e6e6;
+    border: 1px solid rgba(0,0,0,.06);
     border-radius: 12px;
     padding: 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.04);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
 }
 
 h2 {
     margin-top: 0;
+    margin-bottom: 10px;
     font-size: 24px;
 }
 
 h3 {
-    font-size: 18px;
     margin-top: 24px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #333;
 }
 
 p {
     margin-bottom: 14px;
+    color: #333;
 }
 
 a {
@@ -94,13 +118,16 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Images */
 img {
-    border-radius: 10px;
+    display: block;
     max-width: 100%;
     height: auto;
-    margin: 6px 0;
+    border-radius: 10px;
+    margin: 10px 0;
 }
 
+/* Tables */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -120,10 +147,29 @@ tr:nth-child(even) {
     background: #f7f8fa;
 }
 
+/* Cards */
+.card {
+    background: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.card h4 {
+    margin: 0 0 8px;
+}
+
+.card p {
+    margin: 6px 0;
+}
+
+/* Contact Form */
 form.contactForm fieldset {
     border: 1px solid #e6e6e6;
     border-radius: 12px;
     padding: 16px;
+    background: white;
 }
 
 form.contactForm label {
@@ -141,6 +187,7 @@ form.contactForm textarea {
     border: 1px solid #ddd;
     border-radius: 8px;
     font-family: inherit;
+    box-sizing: border-box;
 }
 
 #submitbutton {
@@ -153,77 +200,11 @@ form.contactForm textarea {
     cursor: pointer;
 }
 
-.card {
-    background: white;
-    border: 1px solid #e6e6e6;
-    border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 12px;
+#submitbutton:hover {
+    opacity: .9;
 }
 
-.card h4 {
-    margin: 0 0 8px 0;
-}
-
-.card p {
-    margin: 6px 0;
-}
-
-#container::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-h1,
-h2,
-h3,
-h4 {
-    line-height: 1.2;
-}
-
-#content {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-}
-
-#menu {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-}
-
-#header {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-}
-
-p {
-    color: #333;
-}
-
-#menu a {
-    transition: background-color 0.2s ease;
-}
-
-h2 {
-    margin-bottom: 10px;
-}
-
-h3 {
-    margin-bottom: 8px;
-    color: #333;
-}
-
-img {
-    display: block;
-    margin: 10px 0;
-}
-
-form.contactForm fieldset {
-    background: #fff;
-}
-
-#content {
-    border: 1px solid rgba(0, 0, 0, 0.06);
-}
-
+/* Carousel */
 .carousel {
     overflow: hidden;
     border-radius: 12px;
@@ -249,8 +230,133 @@ form.contactForm fieldset {
     from {
         transform: translateX(0);
     }
-
     to {
         transform: translateX(-50%);
+    }
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media (max-width: 1024px) {
+
+    #container {
+        padding: 0 20px;
+    }
+
+    #menu {
+        flex-basis: 200px;
+    }
+
+    .carousel-track img {
+        width: 220px;
+        height: 140px;
+    }
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width: 768px) {
+
+    #container {
+        flex-direction: column;
+    }
+
+    #menu,
+    #content {
+        width: 100%;
+        flex: none;
+    }
+
+    #header {
+        text-align: center;
+    }
+
+    #content {
+        padding: 18px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    form.contactForm input,
+    form.contactForm textarea {
+        max-width: 100%;
+    }
+
+    .carousel-track img {
+        width: 180px;
+        height: 120px;
+    }
+}
+
+/* ==========================
+   Small Phones
+========================== */
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    #container {
+        padding: 0 10px;
+    }
+
+    #header {
+        padding: 14px;
+        border-radius: 8px;
+    }
+
+    #menu {
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    #menu a {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    #content {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    td {
+        padding: 8px;
+    }
+
+    #submitbutton {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .carousel-track img {
+        width: 150px;
+        height: 100px;
     }
 }
